@@ -60,8 +60,17 @@ end architecture dataflow;
 ### Playground link
 Here is link my playground link to my play [playground program site](https://www.edaplayground.com/x/A8MC).
 (https://www.edaplayground.com/x/A8MC)
-
-
+### Function table
+| **c** | **b** |**a** | **f(c,b,a)** |
+| :-: | :-: | :-: | :-: |
+| 0 | 0 | 0 | 1 |
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 0 | 0 |
+| 0 | 1 | 1 | 0 |
+| 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 |
+| 1 | 1 | 0 | 0 |
+| 1 | 1 | 1 | 0 |
 ## Distributive laws verification 1 
 ### Code of architecture
 ```vhdl
