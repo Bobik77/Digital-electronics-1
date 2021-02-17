@@ -1,5 +1,5 @@
 # BPC-DE1 Lab_02
-Github Digital-electronic-1 [repository](todo)
+Github Digital-electronic-1 [repository](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_02)
 ## Preparation task
 Truth Table for 2-bit comparator
 | **Dec. equivalent** | **B[1:0]** | **A[1:0]** | **B is greater than A** | **B equals A** | **B is less than A** |
@@ -22,7 +22,7 @@ Truth Table for 2-bit comparator
 | 15 | 1 1 | 1 1 | 0 | 1 | 0 |
 ## 2-bit comparator
 ### K-maps and Sop/Pos functions
-![K_maps](img/k_maps.pdf)
+![K_maps](img/k_maps.jpg)
 ### Simulation screenshots
 ![sim1](img/sim1.png)
 ![terminal1](img/terminal1.png)
