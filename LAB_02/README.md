@@ -72,8 +72,7 @@ architecture testbench of tb_comparator_4bit is
     signal s_B_less_A    : std_logic;
 
 begin
-    -- Connecting testbench signals with comparator_2bit entity (Unit Under Test)
-    uut_comparator_2bit : entity work.comparator_2bit
+
         port map(
             a_i           => s_a,
             b_i           => s_b,
@@ -96,61 +95,61 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 00, 00" severity error;
+        report "Test failed for input combination: 0000, 0000" severity error;
         
         s_b <= "1100"; s_a <= "0101"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 00, 01" severity error;
+        report "Test failed for input combination: 1100, 0101" severity error;
         
         s_b <= "0010"; s_a <= "0111"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-        report "Test failed for input combination: 00, 10" severity error;
+        report "Test failed for input combination: 0010, 0111" severity error;
 
         s_b <= "1111"; s_a <= "1111"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 00, 11" severity error;
+        report "Test failed for input combination: 1111, 1111" severity error;
      
         s_b <= "1111"; s_a <= "1010"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 01, 00" severity error;
+        report "Test failed for input combination: 1111, 1010" severity error;
         
         s_b <= "0110"; s_a <= "1000"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-        report "Test failed for input combination: 01, 01" severity error;
+        report "Test failed for input combination: 0110, 1000" severity error;
         
         s_b <= "1011"; s_a <= "1101"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-        report "Test failed for input combination: 01, 10" severity error;
+        report "Test failed for input combination: 1011, 1101" severity error;
         
         s_b <= "1001"; s_a <= "0100"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 01, 11" severity error;
+        report "Test failed for input combination: 1001, 0100" severity error;
         
         s_b <= "0101"; s_a <= "0101"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 10, 00" severity error;
+        report "Test failed for input combination: 0101, 0101" severity error;
         
         s_b <= "1110"; s_a <= "1100"; wait for 100 ns;
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-        report "Test failed for input combination: 10, 01" severity error;
+        report "Test failed for input combination: 1110, 1100" severity error;
         
         
         -- Report a note at the end of stimulus process
@@ -161,19 +160,19 @@ begin
 end architecture testbench;
 ```
 ### Terminal listing (with error)
-```vhdl
-[2021-02-17 09:02:38 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_2bit && ghdl -r  tb_comparator_2bit   
+```
+[2021-02-18 05:40:57 EST] ghdl -i design.vhd testbench.vhd  && ghdl -m  tb_comparator_4bit && ghdl -r  tb_comparator_4bit   
 analyze design.vhd
 analyze testbench.vhd
-elaborate tb_comparator_2bit
+elaborate tb_comparator_4bit
 testbench.vhd:51:9:@0ms:(report note): Stimulus process started
-testbench.vhd:57:9:@100ns:(assertion error): Test failed for input combination: 00, 00
-testbench.vhd:63:9:@200ns:(assertion error): Test failed for input combination: 00, 01
-testbench.vhd:75:9:@400ns:(assertion error): Test failed for input combination: 00, 11
-testbench.vhd:81:9:@500ns:(assertion error): Test failed for input combination: 01, 00
-testbench.vhd:99:9:@800ns:(assertion error): Test failed for input combination: 01, 11
-testbench.vhd:105:9:@900ns:(assertion error): Test failed for input combination: 10, 00
-testbench.vhd:111:9:@1us:(assertion error): Test failed for input combination: 10, 01
+testbench.vhd:57:9:@100ns:(assertion error): Test failed for input combination: 0000, 0000
+testbench.vhd:63:9:@200ns:(assertion error): Test failed for input combination: 1100, 0101
+testbench.vhd:75:9:@400ns:(assertion error): Test failed for input combination: 1111, 1111
+testbench.vhd:81:9:@500ns:(assertion error): Test failed for input combination: 1111, 1010
+testbench.vhd:99:9:@800ns:(assertion error): Test failed for input combination: 1001, 0100
+testbench.vhd:105:9:@900ns:(assertion error): Test failed for input combination: 0101, 0101
+testbench.vhd:111:9:@1us:(assertion error): Test failed for input combination: 1110, 1100
 testbench.vhd:117:9:@1us:(report note): Stimulus process finished
 Done
 ```
