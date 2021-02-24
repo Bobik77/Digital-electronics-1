@@ -10,6 +10,7 @@
 Done :white_check_mark:
 ### SW and LEDs connect table:
 ![scheme](img/sw_led_scheme.png)
+
 [SOURCE](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/n4r.png?cache=) 
 | Part | PIN |
 | :--: | :--: |
