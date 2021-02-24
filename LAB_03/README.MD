@@ -29,7 +29,6 @@ Done :white_check_mark:
 | LED13 | V14 |
 | LED14 | V12 |
 | LED15 | V11 |
-| :--: | :--: |
 | SW0 | J15 |
 | SW1 | L16 |
 | SW2 | M13 |
