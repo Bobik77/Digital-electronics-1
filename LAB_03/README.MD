@@ -12,7 +12,7 @@ Done :white_check_mark:
 ![scheme](img/sw_led_scheme.png)
 [SOURCE](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/n4r.png?cache=) 
 | Part | PIN |
-| :-: | :-: |
+| :--: | :--: |
 | LED0 | H17 |
 | LED1 | K15 |
 | LED2 | J13 |
@@ -29,7 +29,7 @@ Done :white_check_mark:
 | LED13 | V14 |
 | LED14 | V12 |
 | LED15 | V11 |
-| :-: | :-: |
+| :--: | :--: |
 | SW0 | J15 |
 | SW1 | L16 |
 | SW2 | M13 |
