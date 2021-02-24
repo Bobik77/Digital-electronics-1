@@ -1,4 +1,6 @@
 # Digital-electronics-1
+[Teachers Repository](https://github.com/tomas-fryza/Digital-electronics-1)
+
 **Name:** Vaněk Pavel,
 **ID:** 221072,
 ## Emphasis example:
