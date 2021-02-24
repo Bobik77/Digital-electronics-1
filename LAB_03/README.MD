@@ -11,7 +11,7 @@ Done :white_check_mark:
 ### SW and LEDs connect table:
 ![scheme](img/sw_led_scheme.png)
 
-[SOURCE](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/n4r.png?cache=) 
+[Image source](https://reference.digilentinc.com/_media/reference/programmable-logic/nexys-a7/n4r.png?cache=) 
 | Part | PIN |
 | :--: | :--: |
 | LED0 | H17 |
@@ -129,17 +129,17 @@ end architecture testbench;
 Vstupní signály byly voleny tak, aby funkčnost multiplexoru byla zjevná.
 ## Vivado tutorial
 ### Project creation:
-*Zadej cestu projektu a vyper RTl jako typ projektu
+* Zadej cestu projektu a vyper RTl jako typ projektu
+* Vytvoř soubor (*Create file*) a pojmenuj ho.  Tím se vytvoří *name*.vhd soubor kódu.
 ![tutorial](img/tutorial1.png)
 ![tutorial](img/tutorial2.png)
-*Vytvoř soubor (*Create file*) a pojmenuj ho.  Tím se vytvoří *name*.vhd soubor kódu.
 ![tutorial](img/tutorial3.png)
 ### Testbench:
 * **File > Add Sources > Add or create simulation >Create file** vytvoříme *name*.vhd soubor testbenche. Zpravidla volíme název  jako *tb_name.vhd*
 ![tutorial](img/tutorial4.png)
 * Testbench vytvoříš běžným postupem jak ses naučil např. na EDA-Playground.
 ### Simulace:
-*  Zvolením ** Flow > Run Simulation > Run  Behavioral Simulation**  spustíme simulaci (projekt je prvně třeba uložit).
+*  Zvolením **Flow > Run Simulation > Run  Behavioral Simulation**  spustíme simulaci (projekt je prvně třeba uložit).
 ### Postprocesor:
 * V postprocesoru vidíme průběhy jednotlivých  signálů
 * Zvětšíme náhled na průběhy a zazoomujeme podle potřeby
