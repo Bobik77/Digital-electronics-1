@@ -211,4 +211,4 @@ end architecture behavioral;
 ```
 ### 3.2. Screenshots
 ![waveform2](img/waveform2.png)
-![waveform3](img/waveform4.png)
+![waveform3](img/waveform3.png)
