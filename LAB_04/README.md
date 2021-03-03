@@ -165,7 +165,50 @@ begin
 
 end architecture behavioral;
 ```
-## LED(7:4) indicators
-### Truth table
-### VHDL listing
-### Screenshots
+## 3. LED(7:4) indicators
+### 3.1. Truth table
+| **Hex** | **Inputs** | **LED4** | **LED5** | **LED6** | **LED7** |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| 0 | 0000 | 1 | 0 | 0 | 0 |
+| 1 | 0001 | 0 | 0 | 1 | 1 |
+| 2 | 0010 | 0 | 0 | 0 | 1 |
+| 3 | 0011 | 0 | 0 | 1 | 0 |
+| 4 | 0100 | 0 | 0 | 0 | 1 |
+| 5 | 0101 | 0 | 0 | 1 | 0 |
+| 6 | 0110 | 0 | 0 | 0 | 0 |
+| 7 | 0111 | 0 | 0 | 1 | 0 |
+| 8 | 1000 | 0 | 0 | 0 | 1 |
+| 9 | 1001 | 0 | 0 | 1 | 0 |
+| A | 1010 | 0 | 1 | 0 | 0 |
+| b | 1011 | 0 | 1 | 1 | 0 |
+| C | 1100 | 0 | 1 | 0 | 0 |
+| d | 1101 | 0 | 1 | 1 | 0 |
+| E | 1110 | 0 | 1 | 0 | 0 |
+| F | 1111 | 0 | 1 | 1 | 0 |
+### LEDs function listing
+```vhdl
+ -- Connect one common anode to 3.3V
+    AN <= b"1111_0111";
+
+    -- Display input value
+    LED(3 downto 0) <= SW;
+
+    -- Turn LED(4) on if input value is equal to 0, ie "0000"
+    LED(4) <= '1' when (SW = "0000") else '0'; 
+    
+    -- Turn LED(5) on if input value is greater than 9
+    LED(5) <= '1' when (SW >"1001") else '0';
+    
+    -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
+    LED(6) <= SW(0); -- compare LSB 
+    
+    -- Turn LED(7) on if input value is a power of two, ie 1, 2, 4, or 8
+    LED(7) <= '1' when SW = "0001" else -- but 1 is not powerof two anyway
+              '1' when SW = "0010" else
+              '1' when SW = "0100" else
+              '1' when SW = "1000" else
+              '0';
+```
+### 3.2. Screenshots
+![waveform2](img/waveform2.png)
+![waveform3](img/waveform4.png)
