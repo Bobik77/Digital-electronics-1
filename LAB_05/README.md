@@ -4,7 +4,7 @@
 /
 [Digital-electronic-1](https://github.com/Bobik77/Digital-electronics-1) 
 /
-[LAB3](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_05)
+[LAB5](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_05)
 ## 1. Preparation tasks:
 ### 1.1. Push-buttons connection
 Push buttons are:

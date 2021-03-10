@@ -4,7 +4,7 @@
 /
 [Digital-electronic-1](https://github.com/Bobik77/Digital-electronics-1) 
 /
-[LAB3](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_04)
+[LAB4](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_04)
 ## 1. Preparation tasks:
 ### 1.1. 7-seg display connect table
 ![scheme](img/sw_led_scheme.png)
