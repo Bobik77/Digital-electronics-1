@@ -124,4 +124,5 @@ Push buttons are:
             seg_o(0) => CG
         );
 ```
-### 3.2. sketch of top layer with two counters
+### 3.2. Sketch of top layer with two counters
+![scheme1](img/scheme.png)
