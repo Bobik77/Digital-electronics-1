@@ -7,7 +7,7 @@
 [LAB_06](https://github.com/Bobik77/Digital-electronics-1/tree/main/LAB_06)
 
 ## 1. Preparation task - timing diagram
-![preparationTask](img/drawnWaveform.png)
+![preparationTask](img/wavedrom.png)
 ## 2. Display driver
 ### 2.1 p_mux process listing
 ```vhdl
@@ -36,7 +36,7 @@
         end case;
     end process p_mux;
 ```
-### 2.2 TestBench listing
+### 2.2 TestBench listing (konečně i s asserty) 
 ```vhdl
 ------------------------------------------------------------------------
 -- Architecture body for testbench
@@ -147,5 +147,55 @@ end architecture testbench;
 ![waveform1](img/waveform1.png)
 ### 2.4 Top layer architecture listing
 ```vhdl
+architecture Behavioral of top is
+    -- No internal signals
+begin
+
+    --------------------------------------------------------------------
+    -- Instance (copy) of driver_7seg_4digits entity
+    driver_seg_4 : entity work.driver_7seg_4digits
+        port map(
+            clk        => CLK100MHZ,
+            reset      => BTNC,
+            -- each group of 4 sw controls one digit
+            -- data0  -- right digit
+            data0_i(3) => SW(3),
+            data0_i(2) => SW(2),
+            data0_i(1) => SW(1),
+            data0_i(0) => SW(0),
+            -- data1
+            data1_i(3) => SW(7),
+            data1_i(2) => SW(6),
+            data1_i(1) => SW(5),
+            data1_i(0) => SW(4),
+            -- data2
+            data2_i(3) => SW(11),
+            data2_i(2) => SW(10),
+            data2_i(1) => SW(9),
+            data2_i(0) => SW(8),
+            -- data3 -- left digit
+            data3_i(3) => SW(15),
+            data3_i(2) => SW(14),
+            data3_i(1) => SW(13),
+            data3_i(0) => SW(12),
+            -- set fix decimal point
+            dp_i => "0111",
+            -- Outputs
+            seg_o(6)    => CA,
+            seg_o(5)    => CB,
+            seg_o(4)    => CC,
+            seg_o(3)    => CD,
+            seg_o(2)    => CE,
+            seg_o(1)    => CF,
+            seg_o(0)    => CG,
+            dp_o        => DP,
+            dig_o       => AN(3 downto 0)
+        );
+
+    -- Disconnect the top four digits of the 7-segment display
+    AN(7 downto 4) <= b"1111";
+
+end architecture Behavioral;
 ```
 ## 3. Eight-digit driver scheme
+![scheme1](img/scheme.png)
