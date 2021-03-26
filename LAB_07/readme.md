@@ -18,7 +18,7 @@
    | 1 | 1 | 1 | No change |
    
 ### 1.2 JK-type flip-flop 
- Charakteristická rovnice: Q(n+1) = J.!Q(n) + !K.Q(n)
+ Charakteristická rovnice: **Q(n+1) = J.!Q(n) + !K.Q(n)**
  
    | **J** | **K** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-: | :-- |
@@ -32,7 +32,7 @@
    | 1 | 1 | 1 | 0 | Inverse |
   
 ### 1.3 T-type flip-flop   
-Charakteristická rovnice: Q(n+1) = T.!Q(n) + !T.Q(n)
+Charakteristická rovnice: **Q(n+1) = T.!Q(n) + !T.Q(n)**
 
    | **T** | **Qn** | **Q(n+1)** | **Comments** |
    | :-: | :-: | :-: | :-- |
