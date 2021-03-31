@@ -142,6 +142,7 @@ end process p_output_fsm;
 ## 3. Smart controller
 ### 3.1 State table
 | **Actual State** | **Output west** | **Output south** | **No cars** | **Cars on west** | **Cars on south** | **Boot direction cars** |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | SOUTH_GO | `RED` | `GREEN` | SOUTH_GO | SOUTH_WAIT | SOUTH_GO | SOUTH_WAIT |
 | SOUTH_WAIT| `RED` | `YELLOW` | SOUTH_WAIT | SOUTH_WAIT | SOUTH_WAIT | SOUTH_WAIT |
 | WEST_GO | `GREEN` | `RED` | WEST_GO | WEST_GO |  WEST_WAIT | WEST_WAIT |
