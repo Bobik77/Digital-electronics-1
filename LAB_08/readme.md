@@ -21,3 +21,22 @@ pre![scheme](img/sw_led_scheme.png)
 | :-: | :-: | :-: | :-: | :-: |
 | LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
 | LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
+
+## 2. Traffic light controller
+### 2.1. VHDL sequential process listing
+```vhdl
+```
+### 2.2. VHDL combinatorial process listing
+```vhdl
+```
+### 2.3. Screenshots
+
+
+
+
+## 3. Smart controller
+### 3.1 State table
+### 3.2 State diagram
+### 3.3 VHDL sequential process listing
+```vhdl
+```
